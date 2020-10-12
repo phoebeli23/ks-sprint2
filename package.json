@@ -14,7 +14,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "generate-schema": "generate-airtable-schema"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -30,5 +31,15 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "airtable-schema-generator": "^1.4.1"
+  },
+  "airtable-schema-generator": {
+    "mode": "auto",
+    "output": "src/lib/airtable",
+    "input": "src/lib/airtable",
+    "defaultView": "Grid view",
+    "airlock": false
   }
 }
