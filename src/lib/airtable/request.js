@@ -42,8 +42,8 @@ export const createPlantingLogs = async record => {
     return createRecord(Tables.PlantingLogs, record)
 };
 
-export const createTomatos = async record => { 
-    return createRecord(Tables.Tomatos, record)
+export const createCrops = async record => { 
+    return createRecord(Tables.Crops, record)
 };
 
   /*
@@ -102,17 +102,17 @@ export const getAllPlantingLogs = async (filterByFormula = '', sort = []) => {
   return getAllRecords(Tables.PlantingLogs, filterByFormula, sort);
 };
 
-export const getTomatosById = async id => { 
-  return getRecordById(Tables.Tomatos, id);
+export const getCropsById = async id => { 
+  return getRecordById(Tables.Crops, id);
 };
 
-export const getTomatosByIds = async ids => {
+export const getCropsByIds = async ids => {
   const formula = `OR(${ids.reduce((f, id) => `${f} {ID}='${id}',`, '')} 1 < 0)`;
-  return getAllRecords(Tables.Tomatos, formula)
+  return getAllRecords(Tables.Crops, formula)
 }
 
-export const getAllTomatos = async (filterByFormula = '', sort = []) => { 
-  return getAllRecords(Tables.Tomatos, filterByFormula, sort);
+export const getAllCrops = async (filterByFormula = '', sort = []) => { 
+  return getAllRecords(Tables.Crops, filterByFormula, sort);
 };
 
   /*
@@ -135,8 +135,8 @@ export const updatePlantingLogs = async (id, recordUpdates) => {
   return updateRecord(Tables.PlantingLogs, id, recordUpdates);
 };
 
-export const updateTomatos = async (id, recordUpdates) => { 
-  return updateRecord(Tables.Tomatos, id, recordUpdates);
+export const updateCrops = async (id, recordUpdates) => { 
+  return updateRecord(Tables.Crops, id, recordUpdates);
 };
 
   /*
@@ -155,6 +155,6 @@ export const deleteHarvestLogs = async id => {
 export const deletePlantingLogs = async id => { 
     return deleteRecord(Tables.PlantingLogs, id);
 };
-export const deleteTomatos = async id => { 
-    return deleteRecord(Tables.Tomatos, id);
+export const deleteCrops = async id => { 
+    return deleteRecord(Tables.Crops, id);
 };
