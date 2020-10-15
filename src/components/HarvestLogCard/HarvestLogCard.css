@@ -1,0 +1,11 @@
+.harvest-log-card {
+    border: 5px solid brown;
+    width: 450px;
+    height: 200px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    flex-wrap: wrap;
+}
